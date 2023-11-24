@@ -7,7 +7,7 @@ import Styles from './styles';
 import ScorePopup from './scorepopup';
 
 
-const YourComponent = ({ questions, submitQuiz, calculateScore, submitted, score, selectOption, resetQuizAction, route, updateDescriptiveAnswer }) => {
+const quiz = ({ questions, submitQuiz, calculateScore, submitted, score, selectOption, resetQuizAction, route, updateDescriptiveAnswer }) => {
   const { username } = route.params;
   const [isScoreVisible, setIsScoreVisible] = useState(false);
   const [answerVisible, setAnswerVisible] = useState(false); 
@@ -135,4 +135,4 @@ const mapDispatchToProps = {
 };
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(YourComponent);
+export default connect(mapStateToProps, mapDispatchToProps)(quiz);
